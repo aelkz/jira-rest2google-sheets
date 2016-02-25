@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <base target="_top">		
+        <?!= include('main-css') ?>
+        <script>
+          // Prevent forms from submitting.
+          function preventFormSubmit() {
+            var forms = document.querySelectorAll('form');
+            for (var i = 0; i < forms.length; i++) {
+              forms[i].addEventListener('submit', function(event) {
+                event.preventDefault();
+              });
+            }
+          }
+          window.addEventListener('load', preventFormSubmit);
+
+          function handleFormSubmit(formObject) {
+            google.script.run.withSuccessHandler(google.script.host.close).loginAction(formObject);
+          }
+        </script>        
+	</head>
+	<body>
+		<div class="jira_canvas">
+           <form id="loginForm" onsubmit="handleFormSubmit(this)">
+	            <div class="jira_logo">
+				</div>
+				<div class="jira_form">
+					<div>
+						<label>Project Prefix</label><br>
+						<input type="text" value="MEBAMG" size="5" class="jira_field" readonly />
+					</div>
+					<div>
+						<label>JIRA Host</label><br>
+						<input type="text" value="jira.indra.es" size="8" class="jira_field" readonly />
+						<label class="lock" title="secured connection over HTTPS">&nbsp;</label>
+					</div>
+					<div>
+						<label class="required">INDRA username</label><br>
+						<input type="text" name="username" id="username" value="" size="15" class="jira_field" />
+					</div>
+					<div>
+						<label class="required">INDRA password</label><br>
+						<input type="password" name="password" id="password" value="" size="15" class="jira_field" />
+					</div>
+					<div>
+						<label>Issue types:</label><br>
+						<label class="bfr"/><label>Big Feature Request</label><br>
+						<label class="fr"/><label>Feature Request</label><br>
+						<label class="fs"/><label>Functional Support</label>
+					</div>
+					<div class="jira_button">
+						<!--the text in the quotes after value will appear on the button-->
+						<input id="button" type="Submit" value="Login" /> 
+					</div>
+					<div class="jira_banner"></div>
+				</div>
+            </form>
+		</div>
+	</body>
+</html>

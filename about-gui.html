@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <base target="_top">		
+        <?!= include('main-css'); ?>
+        <script>
+          // Prevent forms from submitting.
+          function initialize() {
+            var forms = document.querySelectorAll('form');
+            for (var i = 0; i < forms.length; i++) {
+              forms[i].addEventListener('submit', function(event) {
+                event.preventDefault();
+              });
+            }
+          }
+
+          function handleFormSubmit(formObject) {
+            google.script.run.withSuccessHandler(google.script.host.close).userAction(formObject);
+          }
+          
+          function isEmpty(value) {
+            return (value == null || value == '' || value == undefined);
+          }
+          
+          window.addEventListener('load', initialize);
+        </script>        
+	</head>
+	<body>
+		<div class="jira_canvas">
+           <form id="loginForm" onsubmit="handleFormSubmit(this)">
+				<div class="jira_form_about">
+					<div>
+						<label>GOOGLE API - Integration with google sheets using JIRA REST API</label>
+                        <br><br>
+                        <label class="copyright">
+                        The MIT License (MIT)
+                        
+                        Copyright (c) <b>2016 RAPHAEL ALEX SILVA ABREU</b><br>
+                        <a href="https://github.com/aelkz">github.com/aelkz</a><br><br>
+                        
+                        <p class="copyright">
+                        Permission is hereby granted, free of charge, to any person obtaining a copy
+                        of this software and associated documentation files (the "Software"), to deal
+                        in the Software without restriction, including without limitation the rights
+                        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                        copies of the Software, and to permit persons to whom the Software is
+                        furnished to do so, subject to the following conditions:
+                        
+                        The above copyright notice and this permission notice shall be included in all
+                        copies or substantial portions of the Software.
+                        
+                        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                        SOFTWARE.
+                        </p>
+                        </label>
+                    </div>
+                    <br>
+                    <div class="jira_button">
+						<input id="button" type="Submit" value="Close" /> 
+					</div>
+				</div>
+            </form>
+		</div>
+	</body>
+</html>

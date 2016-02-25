@@ -1,0 +1,197 @@
+<style>
+h1 {
+color: blue;
+font-family: verdana;
+font-size: 300%;
+}
+p  {
+color: red;
+font-family: courier;
+font-size: 160%;
+}
+input[type=text],input[type=password]{
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+border: 1px solid #AFCEFD;
+height: 23px;
+padding-left: 5px;
+padding-right: 5px;
+color: #393939;
+font-family: verdana, arial;
+}
+div.jira_canvas  {
+margin: auto;
+width: 500px;
+height: 350px;
+text-align: center;
+vertical-align: middle;
+border: 3px solid #eaeaea;
+padding: 10px;
+}
+div.jira_logo  {
+background-image: url('https://drive.google.com/uc?export=view&id=0B-3KQ_ohu-RFNWVlcDZma09CMk0');
+margin: auto;
+width: 240px;
+height: 50px;
+/* border: 1px solid #c2ea4f; */
+}
+div.jira_form  {
+background-color: #eaeaea;
+background-size: 498px 280px;
+background-repeat: none;
+text-align: left;
+vertical-align: middle;
+width: 97.5%;
+height: 290px;
+/* border: 1px solid #000000; */
+padding: 5px; 
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+div.jira_form_about  {
+background-color: #eaeaea;
+background-size: 498px 280px;
+background-repeat: none;
+text-align: left;
+vertical-align: middle;
+width: 97.5%;
+height: 320px;
+/* border: 1px solid #000000; */
+padding: 5px; 
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+div.jira_button  {
+margin: auto;
+text-align: center;
+vertical-align: middle;
+}
+div.jira_banner {
+position: relative;
+background-image: url('https://drive.google.com/uc?export=view&id=0B-3KQ_ohu-RFYlV0d1MyMWxSN3c');
+background-repeat: no-repeat;
+background-position: right;
+background-size: 150px 38px;
+top: -280px;
+width: 97%;
+height: 50px;
+}
+div.jira_user_avatar {
+position: relative;
+background-image: url('https://jira.indra.es/secure/useravatar?ownerId=rasilvaa&avatarId=47619');
+background-repeat: no-repeat;
+background-position: right;
+background-size: 48px 48px;
+top: -280px;
+width: 97%;
+height: 50px;
+}
+label {
+font-weight: bold; 
+font-family: tahoma, arial;
+font-size: 12px;
+}
+label.required {
+background-image: url('https://drive.google.com/uc?export=view&id=0B-3KQ_ohu-RFcDhvWHp6V05idm8');
+background-position: right;
+background-repeat: no-repeat;
+background-color: transparent;
+padding-right: 15px;
+font-weight: bold; 
+font-family: verdana, arial;
+font-size: 12px;
+}
+
+label.lock {
+background-image: url('https://drive.google.com/uc?export=view&id=0B-3KQ_ohu-RFZFA0ekQ5TFVPR2M');
+background-position: left;
+background-repeat: no-repeat;
+padding-right: 20px;
+font-weight: bold; 
+font-family: verdana, arial;
+font-size: 12px;
+}
+label.bfr {
+background-image: url('https://drive.google.com/uc?export=view&id=0B-3KQ_ohu-RFWktRcFZOMnNmT2s');
+background-position: left;
+background-repeat: no-repeat;
+font-weight: normal; 
+padding-left: 30px;
+margin-top: 10px;
+line-height:18px;
+font-size: 15px;
+}
+label.fr {
+background-image: url('https://drive.google.com/uc?export=view&id=0B-3KQ_ohu-RFazVIc1pyMVBLV2c');
+background-position: left;
+background-repeat: no-repeat;
+font-weight: normal; 
+padding-left: 30px;
+margin-top: 10px;
+line-height:18px;
+font-size: 15px;
+}
+label.fs {
+background-image: url('https://drive.google.com/uc?export=view&id=0B-3KQ_ohu-RFTW41bkR3Uk04aFU');
+background-position: left;
+background-repeat: no-repeat;
+font-weight: normal; 
+padding-left: 30px;
+margin-top: 10px;
+line-height:18px;
+font-size: 15px;
+}
+label.copyright {
+font-weight: normal; 
+font-size: 12px;
+color: #393939;
+font-family: verdana, arial;
+text-align:justify;
+}
+p.copyright {
+font-weight: normal; 
+font-size: 12px;
+color: #393939;
+font-family: verdana, arial;
+text-align:justify;
+margin:0;
+}
+/***FIRST STYLE THE BUTTON***/
+input#button{
+cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+padding:5px 25px; /*add some padding to the inside of the button*/
+background:#288FB1; /*the colour of the button*/
+border:1px solid #2A6384; /*required or the default border for the browser will appear*/
+/*give the button curved corners, alter the size as required*/
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+/*give the button a drop shadow*/
+-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+box-shadow: 0 0 4px rgba(0,0,0, .75);
+/*style the text*/
+color:#f3f3f3;
+font-size:12px;
+}
+/***NOW STYLE THE BUTTON'S HOVER AND FOCUS STATES***/
+input#button:hover, input#button:focus{
+background-color :#6FB4D8; /*make the background a little darker*/
+border:1px solid #2F8CC2; /*required or the default border for the browser will appear*/
+/*reduce the drop shadow size to give a pushed button effect*/
+-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+box-shadow: 0 0 1px rgba(0,0,0, .75);
+}
+input#button:active{
+background-color :#98D4F3; /*make the background a little darker*/
+border:1px solid #eaeaea; /*required or the default border for the browser will appear*/
+/*reduce the drop shadow size to give a pushed button effect*/
+-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+box-shadow: 0 0 1px rgba(0,0,0, .75);
+}
+</style>
