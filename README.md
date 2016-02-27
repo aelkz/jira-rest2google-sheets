@@ -1,6 +1,6 @@
 # jira-rest2google-sheets
 Atlassian JIRA REST API Integration with Google API and Google Sheets app
-This app can let you pull Atlassian Jira user backlog and additional information. You can also use default registered issues fields and custom issue fields. It builds a general backlog and another user specific that you can parameterize using JQL (Jira Query Language) from Jira REST API.
+This app can let you pull Atlassian Jira user backlog. You can also use default registered issues fields and custom issue fields. It builds a general backlog and another user specific that you can parameterize using JQL (Jira Query Language) from Jira REST API. This can help you to track and customize information about Jira issues. (project currently under development)
 ----------
 
 > **Note:**
